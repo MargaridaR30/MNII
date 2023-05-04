@@ -9,6 +9,6 @@ L = sqrt(dt.^2 + dy.^2);
 quiver(t,y,dt./L,dy./L, 'k');
 hold on
 c = -3;
-y = @t c.*exp(-3*t)+(t./3)-(1/9);
-plot(y,t);
+t = 0:0.1:3; y = c*exp(-3*t)+t/3-1/9;
+plot(t,y, 'LineWidth',2); axis([0,3,-1,2]);
 hold off
